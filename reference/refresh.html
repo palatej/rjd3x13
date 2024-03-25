@@ -14,7 +14,7 @@ in a domain of constraints. See details and examples."><!-- mathjax --><script s
     
     <a class="navbar-brand me-2" href="../index.html">rjd3x13</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3.2.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3.2.3</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,6 +24,9 @@ in a domain of constraints. See details and examples."><!-- mathjax --><script s
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
@@ -137,22 +140,16 @@ and coefficients are unchanged.</p>
 <span class="r-in"><span><span class="va">y_new</span> <span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/stats/window.html" class="external-link">window</a></span><span class="op">(</span><span class="va">y</span>,end <span class="op">=</span> <span class="fl">2010</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="co"># specification for first estimation</span></span></span>
 <span class="r-in"><span><span class="va">spec_x13_1</span><span class="op">&lt;-</span><span class="fu"><a href="x13_spec.html">x13_spec</a></span><span class="op">(</span><span class="st">"rsa5c"</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> '.p2r_ivs' is not an exported object from 'namespace:rjd3toolkit'</span>
 <span class="r-in"><span><span class="co"># first estimation</span></span></span>
 <span class="r-in"><span><span class="va">sa_x13</span><span class="op">&lt;-</span> <span class="fu"><a href="x13.html">x13</a></span><span class="op">(</span><span class="va">y_raw</span>, <span class="va">spec_x13_1</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'spec_x13_1' not found</span>
 <span class="r-in"><span><span class="co"># refreshing the specification</span></span></span>
 <span class="r-in"><span><span class="va">current_result_spec</span> <span class="op">&lt;-</span> <span class="va">sa_x13</span><span class="op">$</span><span class="va">result_spec</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'sa_x13' not found</span>
 <span class="r-in"><span><span class="va">current_domain_spec</span> <span class="op">&lt;-</span> <span class="va">sa_x13</span><span class="op">$</span><span class="va">estimation_spec</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'sa_x13' not found</span>
 <span class="r-in"><span><span class="va">spec_x13_ref</span> <span class="op">&lt;-</span> <span class="fu">x13_refresh</span><span class="op">(</span><span class="va">current_result_spec</span>, <span class="co"># point spec to be refreshed</span></span></span>
 <span class="r-in"><span>  <span class="va">current_domain_spec</span>, <span class="co">#domain spec (set of constraints)</span></span></span>
 <span class="r-in"><span>  policy <span class="op">=</span> <span class="st">"Fixed"</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'current_result_spec' not found</span>
 <span class="r-in"><span><span class="co"># 2nd estimation with refreshed specification</span></span></span>
 <span class="r-in"><span><span class="va">sa_x13_ref</span> <span class="op">&lt;-</span> <span class="fu"><a href="x13.html">x13</a></span><span class="op">(</span><span class="va">y_new</span>, <span class="va">spec_x13_ref</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'spec_x13_ref' not found</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
